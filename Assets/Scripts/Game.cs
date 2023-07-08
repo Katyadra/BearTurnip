@@ -13,10 +13,6 @@ public class Game : MonoBehaviour
         gameLogic.DealCards();
     }
 
-    void Update()
-    {
-        // Ваш код обновления
-    }
 }
 
 public class GameLogic
@@ -65,7 +61,7 @@ public class GameLogic
 
     private string GetCountryName(int index)
     {
-        string[] countryNames = { "Country A", "Country B", "Country C", "Country D", "Country E", "Country F" };
+        string[] countryNames = { "Russia", "Usa", "England", "Italy" };
         return countryNames[index];
     }
 

@@ -1,14 +1,12 @@
 using UnityEngine.EventSystems;
 using UnityEngine;
-using static DragAndDrop;
-using System.Collections.Generic;
-using System;
 
 public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     Camera MainCamera;
     Vector3 offset;
     public Transform DefaultParent;
+
     void Awake()
     {
         MainCamera = Camera.allCameras[0];
@@ -16,7 +14,7 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        offset = transform.position = MainCamera.ScreenToWorldPoint(eventData.position);
+        offset = transform.position - MainCamera.ScreenToWorldPoint(eventData.position);
         DefaultParent = transform.parent;
         transform.SetParent(DefaultParent.parent);
         GetComponent<CanvasGroup>().blocksRaycasts = false;
@@ -28,7 +26,6 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         newPos.z = 0;
         transform.position = newPos + offset;
     }
-
 
     public void OnEndDrag(PointerEventData eventData)
     {

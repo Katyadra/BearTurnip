@@ -422,10 +422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61ed266a20222e748a14f08fafba32be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draggingParent: {fileID: 1512304143}
-  playArea: {fileID: 101299022}
-  myCards: {fileID: 645123016}
-  hand: {fileID: 95031168}
+  DefaultParent: {fileID: 0}
 --- !u!225 &253802202
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -528,10 +525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61ed266a20222e748a14f08fafba32be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draggingParent: {fileID: 1512304143}
-  playArea: {fileID: 101299022}
-  myCards: {fileID: 645123016}
-  hand: {fileID: 95031168}
+  DefaultParent: {fileID: 0}
 --- !u!225 &256317182
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -786,10 +780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61ed266a20222e748a14f08fafba32be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draggingParent: {fileID: 1512304143}
-  playArea: {fileID: 101299022}
-  myCards: {fileID: 645123016}
-  hand: {fileID: 95031168}
+  DefaultParent: {fileID: 0}
 --- !u!225 &399063604
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1100,10 +1091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61ed266a20222e748a14f08fafba32be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draggingParent: {fileID: 1512304143}
-  playArea: {fileID: 101299022}
-  myCards: {fileID: 645123016}
-  hand: {fileID: 95031168}
+  DefaultParent: {fileID: 0}
 --- !u!225 &664974861
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1300,10 +1288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61ed266a20222e748a14f08fafba32be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draggingParent: {fileID: 1512304143}
-  playArea: {fileID: 101299022}
-  myCards: {fileID: 645123016}
-  hand: {fileID: 95031168}
+  DefaultParent: {fileID: 0}
 --- !u!225 &717655150
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1841,6 +1826,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Deck 4 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 9024368821095309532, guid: 11f71415005581c4594cb139f5e7740c,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d2b3fe8d7d663e74eaa9489ca028716d,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1942,10 +1933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61ed266a20222e748a14f08fafba32be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draggingParent: {fileID: 1512304143}
-  playArea: {fileID: 101299022}
-  myCards: {fileID: 645123016}
-  hand: {fileID: 95031168}
+  DefaultParent: {fileID: 0}
 --- !u!225 &1213778870
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2124,10 +2112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61ed266a20222e748a14f08fafba32be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draggingParent: {fileID: 1512304143}
-  playArea: {fileID: 101299022}
-  myCards: {fileID: 645123016}
-  hand: {fileID: 95031168}
+  DefaultParent: {fileID: 0}
 --- !u!225 &1404018064
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2593,6 +2578,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Deck 4 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 9024368821095309532, guid: 11f71415005581c4594cb139f5e7740c,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d2b3fe8d7d663e74eaa9489ca028716d,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2722,6 +2713,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Deck 4 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9024368821095309532, guid: 11f71415005581c4594cb139f5e7740c,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d2b3fe8d7d663e74eaa9489ca028716d,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2851,6 +2848,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Deck 4
       objectReference: {fileID: 0}
+    - target: {fileID: 9024368821095309532, guid: 11f71415005581c4594cb139f5e7740c,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d2b3fe8d7d663e74eaa9489ca028716d,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
