@@ -135,6 +135,8 @@ GameObject:
   - component: {fileID: 95031171}
   - component: {fileID: 95031170}
   - component: {fileID: 95031169}
+  - component: {fileID: 95031172}
+  - component: {fileID: 95031173}
   m_Layer: 5
   m_Name: Hand
   m_TagString: Untagged
@@ -230,6 +232,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 95031167}
   m_CullTransparentMesh: 1
+--- !u!225 &95031172
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95031167}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &95031173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95031167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60eee8e67e3ff344ab0d2a56405be86f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &101299021
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,6 +344,7 @@ GameObject:
   - component: {fileID: 253802200}
   - component: {fileID: 253802199}
   - component: {fileID: 253802201}
+  - component: {fileID: 253802202}
   m_Layer: 5
   m_Name: Image (2)
   m_TagString: Untagged
@@ -399,6 +426,18 @@ MonoBehaviour:
   playArea: {fileID: 101299022}
   myCards: {fileID: 645123016}
   hand: {fileID: 95031168}
+--- !u!225 &253802202
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253802197}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &256317177
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,6 +450,7 @@ GameObject:
   - component: {fileID: 256317180}
   - component: {fileID: 256317179}
   - component: {fileID: 256317181}
+  - component: {fileID: 256317182}
   m_Layer: 5
   m_Name: Image (1)
   m_TagString: Untagged
@@ -492,6 +532,18 @@ MonoBehaviour:
   playArea: {fileID: 101299022}
   myCards: {fileID: 645123016}
   hand: {fileID: 95031168}
+--- !u!225 &256317182
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256317177}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &310817272
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,6 +708,7 @@ GameObject:
   - component: {fileID: 399063602}
   - component: {fileID: 399063601}
   - component: {fileID: 399063603}
+  - component: {fileID: 399063604}
   m_Layer: 5
   m_Name: Image (1)
   m_TagString: Untagged
@@ -737,6 +790,18 @@ MonoBehaviour:
   playArea: {fileID: 101299022}
   myCards: {fileID: 645123016}
   hand: {fileID: 95031168}
+--- !u!225 &399063604
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399063599}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &597450767
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,6 +890,8 @@ GameObject:
   - component: {fileID: 645123019}
   - component: {fileID: 645123018}
   - component: {fileID: 645123017}
+  - component: {fileID: 645123020}
+  - component: {fileID: 645123021}
   m_Layer: 5
   m_Name: MyCards
   m_TagString: Untagged
@@ -919,6 +986,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 645123015}
   m_CullTransparentMesh: 1
+--- !u!225 &645123020
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645123015}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &645123021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645123015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60eee8e67e3ff344ab0d2a56405be86f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &664974856
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,6 +1022,7 @@ GameObject:
   - component: {fileID: 664974859}
   - component: {fileID: 664974858}
   - component: {fileID: 664974860}
+  - component: {fileID: 664974861}
   m_Layer: 5
   m_Name: Image (2)
   m_TagString: Untagged
@@ -1012,6 +1104,18 @@ MonoBehaviour:
   playArea: {fileID: 101299022}
   myCards: {fileID: 645123016}
   hand: {fileID: 95031168}
+--- !u!225 &664974861
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664974856}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1118,6 +1222,7 @@ GameObject:
   - component: {fileID: 717655148}
   - component: {fileID: 717655147}
   - component: {fileID: 717655149}
+  - component: {fileID: 717655150}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -1199,6 +1304,18 @@ MonoBehaviour:
   playArea: {fileID: 101299022}
   myCards: {fileID: 645123016}
   hand: {fileID: 95031168}
+--- !u!225 &717655150
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717655145}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &726345603
 GameObject:
   m_ObjectHideFlags: 0
@@ -1747,6 +1864,7 @@ GameObject:
   - component: {fileID: 1213778868}
   - component: {fileID: 1213778867}
   - component: {fileID: 1213778869}
+  - component: {fileID: 1213778870}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -1828,6 +1946,18 @@ MonoBehaviour:
   playArea: {fileID: 101299022}
   myCards: {fileID: 645123016}
   hand: {fileID: 95031168}
+--- !u!225 &1213778870
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213778865}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1241449983
 GameObject:
   m_ObjectHideFlags: 0
@@ -1916,6 +2046,7 @@ GameObject:
   - component: {fileID: 1404018062}
   - component: {fileID: 1404018061}
   - component: {fileID: 1404018063}
+  - component: {fileID: 1404018064}
   m_Layer: 5
   m_Name: Image (3)
   m_TagString: Untagged
@@ -1997,6 +2128,18 @@ MonoBehaviour:
   playArea: {fileID: 101299022}
   myCards: {fileID: 645123016}
   hand: {fileID: 95031168}
+--- !u!225 &1404018064
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404018059}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1412208969
 GameObject:
   m_ObjectHideFlags: 0
