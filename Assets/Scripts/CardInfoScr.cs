@@ -21,9 +21,16 @@ public class CardInfoScr : MonoBehaviour
         CountryLogo.preserveAspect = true;  
         Name.text = card.Name;
     }
-/*
+
     private void Start()
     {
-        ShowCardInfo(CardManager.AllCards[transform.GetSiblingIndex()]);
-    }*/
+        // Здесь просто вызываем новую функцию и получаем случайные карты
+        List<Card> randomCards = CardManagerScr.GetRandomCards(4);
+
+        // Затем, показываем информацию каждой случайной карте
+        foreach (Card card in randomCards)
+        {
+            ShowCardInfo(card);
+        }
+    }
 }

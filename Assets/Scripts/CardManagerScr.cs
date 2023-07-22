@@ -26,28 +26,39 @@ public class CardManagerScr : MonoBehaviour
 {
     public void Awake()
     {
-        // Load all card images
-        var cardImages = Resources.LoadAll<Sprite>("Images/Cards");
+        string[] cardNames = new string[] { "Babka", "Ded", "Dog", "Cat", "Mouse", "Vnuchka" };
+        string[] flagNames = new string[] { "Russia", "France", "Italy", "Germany", "UK", "USA" };
 
-        // Load all country flag images
-        var countryFlags = Resources.LoadAll<Sprite>("Images/Flags");
-
-        foreach (var cardImage in cardImages)
+        foreach (string cardName in cardNames)
         {
-            foreach (var countryFlag in countryFlags)
+            foreach (string flagName in flagNames)
             {
-                // Create a new card with the name of the cardImage, cardImage path, and each countryFlag path
-                var newCard = new Card(cardImage.name, $"Images/Cards/{cardImage.name}", $"Images/Flags/{countryFlag.name}");
+                string cardPath = $"Images/Cards/{cardName}";
+                string flagPath = $"Images/Flags/{flagName}";
 
-                // Add the new card to the AllCards list
-                CardManager.AllCards.Add(newCard);
-
-                // Log the paths
-                Debug.Log($"Card Image Path: Images/Cards/{cardImage.name}");
-                Debug.Log($"Country Flag Path: Images/Flags/{countryFlag.name}");
+                CardManager.AllCards.Add(new Card(cardName, cardPath, flagPath));
             }
         }
     }
+
+    public static List<Card> GetRandomCards(int numberOfCards)
+    {
+        List<Card> randomCards = new List<Card>();
+        List<Card> copyList = new List<Card>(CardManager.AllCards); // Создаем копию списка
+
+        for (int i = 0; i < numberOfCards; i++)
+        {
+            if (copyList.Count > 0)
+            {
+                int index = UnityEngine.Random.Range(0, copyList.Count); // Выбираем случайный индекс
+                randomCards.Add(copyList[index]); // Добавляем карту с этим индексом
+                copyList.RemoveAt(index); // Удаляем выбранную карту из копии списка
+            }
+        }
+
+        return randomCards;
+    }
+
 
 }
 
