@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\CardMovementScr.cs" />
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
     <Compile Include="Assets\Scripts\DropPlaceScr.cs" />
+    <Compile Include="Assets\Scripts\Menu&amp;Server\SettingsMenu.cs" />
     <Compile Include="Assets\Scripts\CardInfoScr.cs" />
     <Compile Include="Assets\Scripts\Menu&amp;Server\Menu.cs" />
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
