@@ -11,14 +11,20 @@ public class CardInfoScr : MonoBehaviour
     public Image CountryLogo;
     public TextMeshProUGUI Name;
 
+    public void HideCardInfo(Card card)
+    {
+        SelfCard = card;
+        Logo.sprite = null;
+        Name.text = "";
+        CountryLogo = null;
+    }
     public void ShowCardInfo(Card card)
     {
         SelfCard = card;
 
         Logo.sprite = card.Logo;
-        Logo.preserveAspect = true; 
         CountryLogo.sprite = card.CountryLogo;
-        CountryLogo.preserveAspect = true;  
+        CountryLogo.preserveAspect = true;
         Name.text = card.Name;
     }
 

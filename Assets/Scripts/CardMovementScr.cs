@@ -10,6 +10,7 @@ public class CardMovementScr : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     public Transform DefaultParent, DefaultTempCardParent;
     GameObject TempCardGO;
     public bool IsDraggable;
+
     private void Awake()
     {
         MainCamera = Camera.allCameras[0];
@@ -21,14 +22,7 @@ public class CardMovementScr : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
         DefaultParent = DefaultTempCardParent = transform.parent;
 
-        DropPlaceScr dropPlaceScr = DefaultParent.GetComponent<DropPlaceScr>();
-        if (dropPlaceScr == null)
-        {
-            Debug.LogError("DropPlaceScr component missing in DefaultParent object.");
-            return;
-        }
-
-        IsDraggable = dropPlaceScr.Type == FieldType.SELF_HAND;
+        IsDraggable = DefaultParent.GetComponent<DropPlaceScr>().Type == FieldType.SELF_HAND;
 
         if (!IsDraggable)
             return;
@@ -36,7 +30,7 @@ public class CardMovementScr : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         TempCardGO.transform.SetParent(DefaultParent);
         TempCardGO.transform.SetSiblingIndex(transform.GetSiblingIndex());
 
-        transform.SetParent(DefaultParent);
+        transform.SetParent(DefaultParent.parent);
         GetComponent<CanvasGroup>().blocksRaycasts = false;
     }
 
@@ -46,35 +40,35 @@ public class CardMovementScr : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             return;
 
         Vector3 newPos = MainCamera.ScreenToWorldPoint(eventData.position);
-        newPos.z = 0;
         transform.position = newPos + offset;
-
-        transform.SetSiblingIndex(TempCardGO.transform.GetSiblingIndex());
 
         if (TempCardGO.transform.parent != DefaultTempCardParent)
             TempCardGO.transform.SetParent(DefaultTempCardParent);
 
         CheckPosition();
+
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         if (!IsDraggable)
             return;
+
         transform.SetParent(DefaultParent);
         GetComponent<CanvasGroup>().blocksRaycasts = true;
 
+        transform.SetSiblingIndex(TempCardGO.transform.GetSiblingIndex());
         TempCardGO.transform.SetParent(GameObject.Find("Canvas").transform);
-        TempCardGO.transform.localPosition = new Vector3(5000, 0, 0);
+        TempCardGO.transform.localPosition = new Vector3(5000, 0);
     }
 
     void CheckPosition()
     {
         int newIndex = DefaultTempCardParent.childCount;
 
-        for (int i = 0; i < DefaultTempCardParent.childCount; i++) 
+        for (int i = 0; i < DefaultTempCardParent.childCount; i++)
         {
-            if (transform.position.x < DefaultTempCardParent.GetChild(i).position.x) 
+            if (transform.position.x < DefaultTempCardParent.GetChild(i).position.x)
             {
                 newIndex = i;
 
