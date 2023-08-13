@@ -40,22 +40,4 @@ public class CardManagerScr : MonoBehaviour
         }
     }
 
-    public static List<Card> GetRandomCards(int numberOfCards)
-    {
-        List<Card> randomCards = new List<Card>();
-        List<Card> availableCards = new List<Card>(CardManager.AllCards); // Create a copy of the available cards
-
-
-        for (int i = 0; i < numberOfCards; i++)
-        {
-            if (availableCards.Count > 0)
-            {
-                int index = UnityEngine.Random.Range(0, availableCards.Count); // Select a random index
-                randomCards.Add(availableCards[index]); // Add the card at the selected index to the randomCards list
-                availableCards.RemoveAt(index); // Remove the selected card from the available cards list
-            }
-        }
-
-        return randomCards;
-    }
 }

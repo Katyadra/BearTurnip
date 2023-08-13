@@ -14,9 +14,9 @@ public class CardInfoScr : MonoBehaviour
     public void HideCardInfo(Card card)
     {
         SelfCard = card;
-        Logo.sprite = null;
-        Name.text = "";
-        CountryLogo = null;
+        Logo.sprite = Resources.Load<Sprite>("Images/CardBack");
+        Name.enabled = false;
+        CountryLogo.enabled = false;
     }
     public void ShowCardInfo(Card card)
     {
@@ -27,7 +27,7 @@ public class CardInfoScr : MonoBehaviour
         CountryLogo.preserveAspect = true;
         Name.text = card.Name;
     }
-
+/*
     private void Start()
     {
         // Здесь просто вызываем новую функцию и получаем случайные карты
@@ -38,5 +38,5 @@ public class CardInfoScr : MonoBehaviour
         {
             ShowCardInfo(card);
         }
-    }
+    }*/
 }
