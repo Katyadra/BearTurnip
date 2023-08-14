@@ -48,40 +48,62 @@ public class GameManagerScr : MonoBehaviour
     public Game CurrentGame;
     public Transform EnemyHand, PlayerHand;
     public GameObject CardPref;
-    int Turn, TurnTime = 30;
+    public GameObject Deck;
     public TextMeshProUGUI TurnTimeText;
     public Button EndTurnButton;
 
     void Start()
     {
         CurrentGame = new Game();
-
-        GiveHandCards(CurrentGame.EnemyDeck, EnemyHand);
-        GiveHandCards(CurrentGame.PlayerDeck, PlayerHand);
+        StartCoroutine(GiveInitialHand());
     }
 
-    void GiveHandCards(List<Card> deck, Transform hand)
+    IEnumerator GiveInitialHand()
     {
-        int i = 0;
-        while (i++ < 4)
-            GiveCardToHand(deck, hand);
+        yield return GiveHandCardsCoroutine(CurrentGame.EnemyDeck, EnemyHand, 4, 0.5f, true);
+        yield return GiveHandCardsCoroutine(CurrentGame.PlayerDeck, PlayerHand, 4, 0.5f, false);
     }
 
-    void GiveCardToHand(List<Card> deck, Transform hand)
+    IEnumerator GiveHandCardsCoroutine(List<Card> deck, Transform hand, int cardsToGive, float delayInSeconds, bool isEnemy)
     {
-        if (deck.Count == 0)
-            return;
+        for (int i = 0; i < cardsToGive; i++)
+        {
+            if (deck.Count == 0)
+                break;
 
-        Card card = deck[0];
+            Card card = deck[0];
+            yield return GiveCardToHandCoroutine(card, hand, delayInSeconds, isEnemy);
+
+            // ”дал€ем только если это игрок, так как карты противника уже скрыты
+            if (!isEnemy)
+            {
+                deck.RemoveAt(0);
+            }
+        }
+    }
+
+    IEnumerator GiveCardToHandCoroutine(Card card, Transform hand, float delayInSeconds, bool isEnemy)
+    {
+        yield return new WaitForSeconds(delayInSeconds);
 
         GameObject cardGO = Instantiate(CardPref, hand, false);
-
-        if (hand == EnemyHand)
+        if (isEnemy)
+        {
             cardGO.GetComponent<CardInfoScr>().HideCardInfo(card);
+        }
         else
+        {
             cardGO.GetComponent<CardInfoScr>().ShowCardInfo(card);
+        }
 
-        deck.RemoveAt(0);
+        // ”меньшаем количество карт в колоде
+        if (!isEnemy)
+        {
+            CurrentGame.PlayerDeck.RemoveAt(0);
+        }
+        else
+        {
+            CurrentGame.EnemyDeck.RemoveAt(0);
+        }
     }
-
 }
