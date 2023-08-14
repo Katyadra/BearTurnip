@@ -62,10 +62,12 @@
     <Compile Include="Assets\Scripts\GameManagerScr.cs" />
     <Compile Include="Assets\Scripts\Menu&amp;Server\MenuManager.cs" />
     <Compile Include="Assets\Scripts\Menu&amp;Server\Launcher.cs" />
+    <Compile Include="Assets\Scripts\Menu&amp;Server\RoomListItem.cs" />
     <Compile Include="Assets\Scripts\CardMovementScr.cs" />
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
     <Compile Include="Assets\Scripts\DropPlaceScr.cs" />
     <Compile Include="Assets\Scripts\Menu&amp;Server\SettingsMenu.cs" />
+    <Compile Include="Assets\Scripts\Menu&amp;Server\PlayerListItem.cs" />
     <Compile Include="Assets\Scripts\CardInfoScr.cs" />
     <Compile Include="Assets\Scripts\Menu&amp;Server\Menu.cs" />
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
@@ -356,14 +358,14 @@
     <Reference Include="Unity.Collections.LowLevel.ILSupport">
       <HintPath>Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
     </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>Assets\Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Photon3Unity3D">
       <HintPath>Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll</HintPath>
-    </Reference>
-    <Reference Include="websocket-sharp">
-      <HintPath>Assets\Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.3f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -873,13 +875,13 @@
       <Project>{33594D80-7789-F688-0BD5-46E83124959F}</Project>
       <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="PhotonChat.csproj">
-      <Project>{09A2C676-CF65-DDB1-1E2E-3C152A2F3991}</Project>
-      <Name>PhotonChat</Name>
-    </ProjectReference>
     <ProjectReference Include="PhotonRealtime.csproj">
       <Project>{3B50827E-4C7D-7075-7AE5-AD5EDD04D01C}</Project>
       <Name>PhotonRealtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonChat.csproj">
+      <Project>{09A2C676-CF65-DDB1-1E2E-3C152A2F3991}</Project>
+      <Name>PhotonChat</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.csproj">
       <Project>{C8F4F181-CD56-59F7-EC56-4731D0F04E62}</Project>
