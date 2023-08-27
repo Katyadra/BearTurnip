@@ -35,6 +35,7 @@ public class Game
                 int index = UnityEngine.Random.Range(0, availableCards.Count); // Select a random index
                 randomCards.Add(availableCards[index]); // Add the card at the selected index to the randomCards list
                 availableCards.RemoveAt(index); // Remove the selected card from the available cards list
+                
             }
         }
 

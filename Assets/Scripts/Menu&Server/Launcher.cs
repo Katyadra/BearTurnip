@@ -110,7 +110,7 @@ public class Launcher : MonoBehaviourPunCallbacks
 
     public override void OnLeftRoom()
     {
-        MenuManager.instance.OpenMenu("createroom");
+        MenuManager.instance.OpenMenu("title");
     }
 
     public void JoinRoom(RoomInfo info)

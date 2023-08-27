@@ -24,14 +24,14 @@ public class DeckView : MonoBehaviour
             cardInstances.Add(cardInstance);
         }
 
-        UpdateCardCountText(); // Update the text field initially
+        UpdateCardCountText(cardInstances.Count);
     }
 
-    private void UpdateCardCountText()
+    private void UpdateCardCountText(int cardCount)
     {
         if (cardCountText != null)
         {
-            cardCountText.text = $"Card Count: {cardInstances.Count}";
+            cardCountText.text = $"Card Count: {cardCount}";
         }
     }
 
@@ -42,8 +42,7 @@ public class DeckView : MonoBehaviour
         Vector3 cardPosition = deckPosition.position + cardInstances.Count * cardOffset * -deckPosition.up;
         cardInstance.transform.position = cardPosition;
         cardInstances.Add(cardInstance);
-
-        UpdateCardCountText(); // Update the text field when a card is added
+        UpdateCardCountText(cardInstances.Count);
     }
 
     // You can call this method when you want to remove a card from the deck
@@ -55,7 +54,7 @@ public class DeckView : MonoBehaviour
             cardInstances.Remove(lastCard);
             Destroy(lastCard);
 
-            UpdateCardCountText(); // Update the text field when a card is removed
+            UpdateCardCountText(cardInstances.Count);
         }
     }
 }
